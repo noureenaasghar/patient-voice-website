@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Patient Voice — an independent patient-centered research concept exploring medication access and meaningful patient partnership.">
+<title>Patient Voice | A Patient-Centered Research Initiative</title>
+<style>
+:root{
+  --navy:#142C45; --teal:#176B70; --sage:#72AFA5;
+  --ivory:#F3F5F3; --gold:#D8A96A; --ink:#243746;
+  --muted:#657783; --white:#fff; --line:#dfe7e3;
+  --shadow:0 18px 55px rgba(20,44,69,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter, "Segoe UI", Arial, sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,calc(100% - 44px));margin:auto}
+header{background:rgba(243,245,243,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:800;letter-spacing:.08em;font-size:15px}
+.brand-mark{width:36px;height:36px;border-radius:12px;background:var(--teal);display:grid;place-items:center;color:white;font-size:19px}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:13px;color:#526574;font-weight:600}
+.nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--navy);color:white;padding:11px 17px;border-radius:7px;font-size:13px;font-weight:700}
+.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:7px;padding:8px 11px;color:var(--navy)}
+.hero{padding:76px 0 70px;overflow:hidden;background:radial-gradient(circle at 83% 25%,rgba(114,175,165,.18),transparent 27%),linear-gradient(120deg,#f7f8f5 0%,#edf3f0 100%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow:before{content:"";width:25px;height:2px;background:var(--gold)}
+h1{font-family:Georgia,serif;color:var(--navy);font-size:clamp(48px,6vw,76px);line-height:1.02;letter-spacing:-.04em;font-weight:500;margin:20px 0}
+h1 em{color:var(--teal);font-weight:500}
+.hero-copy{max-width:590px;color:#526574;font-size:17px;line-height:1.8}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:7px;font-size:13px;font-weight:750;transition:.2s}
+.btn-primary{background:var(--teal);color:white;box-shadow:0 8px 20px rgba(23,107,112,.18)}
+.btn-primary:hover{transform:translateY(-2px);background:#10585d}
+.btn-secondary{border:1px solid #bdcbc7;color:var(--navy);background:rgba(255,255,255,.55)}
+.hero-note{margin-top:22px;font-size:11px;color:#7b8a91}
+.visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center}
+.visual-card{width:min(100%,470px);background:white;border:1px solid #e5ece8;border-radius:18px;padding:25px;box-shadow:var(--shadow);position:relative;z-index:2}
+.visual-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.visual-label{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#788a91;font-weight:800}
+.dot{width:9px;height:9px;background:var(--sage);border-radius:50%;box-shadow:0 0 0 5px #e7f2ef}
+.quote{font-family:Georgia,serif;font-size:25px;line-height:1.35;color:var(--navy);margin:15px 0 24px}
+.quote span{color:var(--teal)}
+.person-row{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:17px}
+.avatar-stack{display:flex}
+.avatar{width:34px;height:34px;border:2px solid white;border-radius:50%;margin-left:-7px;background:#d8e8e3;display:grid;place-items:center;font-size:13px;color:var(--teal)}
+.avatar:first-child{margin-left:0;background:#f1e5d3;color:#87653b}
+.avatar:nth-child(2){background:#d9e2ed;color:#425c79}
+.person-copy strong{display:block;color:var(--navy);font-size:12px}
+.person-copy small{font-size:10px;color:#819097}
+.float-chip{position:absolute;z-index:3;background:white;padding:12px 15px;border-radius:10px;box-shadow:0 10px 28px rgba(20,44,69,.10);font-size:11px;font-weight:750;color:var(--navy)}
+.chip-one{top:28px;right:0}.chip-two{bottom:33px;left:0}
+.chip-icon{color:var(--teal);font-size:16px;margin-right:7px}
+.section{padding:82px 0}
+.section-head{max-width:690px;margin-bottom:35px}
+.kicker{color:var(--teal);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,48px);line-height:1.12;color:var(--navy);font-weight:500;margin:12px 0}
+.section-intro{color:var(--muted);font-size:15px;max-width:650px}
+.aim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.aim-card{background:white;border:1px solid var(--line);border-radius:12px;padding:25px;min-height:220px;transition:.2s}
+.aim-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.number{font-family:Georgia,serif;color:var(--gold);font-size:27px}
+.aim-card h3{font-family:Georgia,serif;color:var(--navy);font-size:22px;font-weight:500;margin:15px 0 9px}
+.aim-card p{font-size:13px;color:var(--muted);margin:0}
+.partnership{background:var(--navy);color:white}
+.partnership .kicker{color:#9dd0c5}
+.partnership h2{color:white}
+.partnership .section-intro{color:#c0cdd3}
+.partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.partner{border:1px solid rgba(255,255,255,.17);background:rgba(255,255,255,.055);border-radius:11px;padding:23px}
+.partner-icon{font-size:24px;color:#a5d0c7}
+.partner h3{font-size:16px;margin:14px 0 7px;color:white}
+.partner p{font-size:12px;color:#c1ced4;margin:0}
+.principle{margin-top:28px;padding:19px 22px;border-left:3px solid var(--gold);background:rgba(255,255,255,.07);color:#e1e9e9;font-family:Georgia,serif;font-size:19px}
+.next{padding:74px 0;background:#e9f0ec}
+.next-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.next h2{font-size:36px}
+.next p{color:var(--muted);max-width:660px;font-size:14px}
+footer{padding:25px 0;background:#10253a;color:#b7c4ca;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:white;letter-spacing:.1em}
+.disclaimer{opacity:.8;max-width:650px}
+@media(max-width:800px){
+ .hero-grid{grid-template-columns:1fr;gap:20px}.visual{min-height:360px}
+ .aim-grid,.partner-grid{grid-template-columns:1fr}
+ .next-grid{grid-template-columns:1fr}.nav-links{display:none;position:absolute;top:76px;left:0;right:0;padding:20px 24px;background:var(--ivory);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
+ .nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}
+}
+@media(max-width:480px){.container{width:min(100% - 30px,1160px)}.hero{padding:55px 0}.visual{min-height:320px}.visual-card{padding:19px}.quote{font-size:21px}.chip-one{right:-3px}.chip-two{left:-3px}.section{padding:62px 0}}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#home"><span class="brand-mark">✳</span><span>PATIENT VOICE</span></a>
+  <nav class="nav-links" id="navLinks">
+   <a href="#about">The Initiative</a><a href="#overview">Research Overview</a><a href="#aims">Research Aims</a><a href="#partnership">Patient Partnership</a><a href="#next">Explore</a>
+  </nav>
+  <a class="nav-cta" href="#aims">Explore the concept&nbsp; ↗</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+ </div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">A patient-centered research initiative</div>
+   <h1>Better access.<br><em>Stronger voices.</em></h1>
+   <p class="hero-copy">Exploring how patients, caregivers, community pharmacists, and local organizations can work together to understand medication access barriers and shape more responsive, patient-centered solutions.</p>
+   <div class="hero-actions">
+    <a class="btn btn-primary" href="#about">Discover the initiative&nbsp; →</a>
+    <a class="btn btn-secondary" href="#aims">View research aims</a>
+   </div>
+   <div class="hero-note">An independent research concept focused on meaningful patient partnership.</div>
+  </div>
+  <div class="visual" aria-label="Illustrative patient partnership message">
+   <div class="float-chip chip-one"><span class="chip-icon">✦</span>Patient partnership</div>
+   <div class="visual-card">
+    <div class="visual-top"><span class="visual-label">The guiding principle</span><span class="dot"></span></div>
+    <div class="quote">“Research should not only be <span>about people</span> — it should be shaped <span>with them.</span>”</div>
+    <div class="person-row">
+     <div class="avatar-stack"><span class="avatar">P</span><span class="avatar">C</span><span class="avatar">✚</span></div>
+     <div class="person-copy"><strong>Patients. Caregivers. Communities.</strong><small>Partners throughout the research process</small></div>
+    </div>
+   </div>
+   <div class="float-chip chip-two"><span class="chip-icon">◎</span>Medication access &amp; continuity</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">The initiative</div>
+   <h2>Making medication access a shared research priority.</h2>
+   <p class="section-intro">For people living with chronic conditions, access to long-term medicines can be affected by more than whether a medicine is available. Cost, distance, communication, treatment burden, and fragmented support may all shape the experience. This concept places patients and communities at the center of understanding those challenges.</p>
+  </div>
+ </div>
+</section>
+
+
+<section class="section" id="overview" style="background:#fff;padding-top:72px">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Research overview</div>
+   <h2>Medication access is a journey, not a single event.</h2>
+   <p class="section-intro">For people managing long-term conditions, getting a medicine is only one part of access. People may need to find an affordable option, travel to a source, understand instructions, obtain refills on time, and navigate changes in their treatment or health system.</p>
+  </div>
+  <div class="aim-grid" style="grid-template-columns:repeat(2,1fr)">
+   <article class="aim-card" style="min-height:0">
+    <div class="kicker">What the literature tells us</div>
+    <h3>Barriers are connected</h3>
+    <p>Research on access to medicines for chronic conditions has identified affordability and availability as recurring concerns. Distance, transportation costs, health-system arrangements, and socioeconomic circumstances can also shape whether people obtain and continue their medicines.</p>
+   </article>
+   <article class="aim-card" style="min-height:0">
+    <div class="kicker">Why patient perspectives matter</div>
+    <h3>Numbers do not tell the whole story</h3>
+    <p>Understanding a barrier also means understanding how it affects daily decisions, relationships with healthcare providers, treatment routines, and the ability to continue care. Patients and caregivers can help identify which problems and outcomes matter most to them.</p>
+   </article>
+  </div>
+  <div style="margin-top:30px;background:#edf3f0;border:1px solid #dfe7e3;border-radius:12px;padding:26px">
+   <div class="kicker">Proposed research problem</div>
+   <h3 style="font-family:Georgia,serif;color:#142C45;font-size:25px;font-weight:500;margin:10px 0">How can medication access research move from describing barriers to prioritizing patient-defined needs and developing locally responsive strategies?</h3>
+   <p style="font-size:13px;color:#657783;margin:0">This is the problem this concept seeks to explore. The precise setting, condition groups, and scope will be narrowed after a more focused literature review and assessment of feasibility.</p>
+  </div>
+  <div style="margin-top:34px">
+   <div class="kicker">Central research question</div>
+   <h2 style="font-size:34px;max-width:900px">How can patients, caregivers, community pharmacists, and community organizations collaboratively identify medication access barriers, prioritize their needs, and co-design patient-centered strategies to improve access and continuity of care?</h2>
+  </div>
+  <div style="margin-top:28px;border-top:1px solid #dfe7e3;padding-top:23px">
+   <div class="kicker">A cautious statement of the research gap</div>
+   <p style="color:#526574;font-size:14px;max-width:900px">Existing research has described multiple barriers to medication access, and patient-centered programs have developed approaches for engaging communities in health research. The opportunity explored here is to bring these strands together around a focused medication-access question: how affected people define and rank the barriers that matter in their own lives, and how those priorities can inform practical strategies developed with community pharmacists and local partners. This is a proposed direction, not a claim that no similar study exists. Its originality must be tested through a structured review of the literature and relevant ongoing projects.</p>
+  </div>
+  <div style="margin-top:26px">
+   <div class="kicker">Selected starting references</div>
+   <ul style="padding-left:19px;color:#526574;font-size:12px;line-height:1.9">
+    <li><a style="color:#176B70;text-decoration:underline" href="https://pubmed.ncbi.nlm.nih.gov/36120091/" target="_blank" rel="noopener">Barriers and Facilitators in Access to Diabetes, Hypertension, and Dyslipidemia Medicines: A Scoping Review</a></li>
+    <li><a style="color:#176B70;text-decoration:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10391227/" target="_blank" rel="noopener">The patient’s medication access journey: a conceptual framework focused beyond adherence</a></li>
+    <li><a style="color:#176B70;text-decoration:underline" href="https://www.pharmacy.umaryland.edu/programs/the-patients-program/about-us/" target="_blank" rel="noopener">University of Maryland PATIENTS Program — About Us</a></li>
+    <li><a style="color:#176B70;text-decoration:underline" href="https://www.pharmacy.umaryland.edu/programs/the-patients-program/what-we-do/" target="_blank" rel="noopener">University of Maryland PATIENTS Program — Current Projects</a></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="aims" style="padding-top:0">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Research aims</div>
+   <h2>From listening to practical priorities.</h2>
+   <p class="section-intro">The proposed work is organized around three connected aims. These will be refined through a focused literature review and discussion of existing evidence.</p>
+  </div>
+  <div class="aim-grid">
+   <article class="aim-card"><div class="number">01</div><h3>Understand lived experience</h3><p>Explore how adults with chronic conditions and their caregivers experience barriers to obtaining and continuing prescribed medicines.</p></article>
+   <article class="aim-card"><div class="number">02</div><h3>Prioritize what matters</h3><p>Bring patient, caregiver, and community perspectives together to identify which barriers and outcomes deserve greatest attention.</p></article>
+   <article class="aim-card"><div class="number">03</div><h3>Co-design responsive strategies</h3><p>Work with community partners and pharmacists to develop practical, patient-informed approaches that can be assessed for feasibility.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section partnership" id="partnership">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Meaningful patient partnership</div>
+   <h2>People are partners — not just participants.</h2>
+   <p class="section-intro">The proposed approach values different forms of knowledge and creates opportunities for patients and community stakeholders to influence research priorities and potential solutions.</p>
+  </div>
+  <div class="partner-grid">
+   <article class="partner"><div class="partner-icon">♡</div><h3>Patients &amp; caregivers</h3><p>Share lived experiences, identify meaningful outcomes, and help shape priorities.</p></article>
+   <article class="partner"><div class="partner-icon">✚</div><h3>Community pharmacists</h3><p>Contribute practical insight into medication-use challenges and points where support may help.</p></article>
+   <article class="partner"><div class="partner-icon">⌂</div><h3>Community organizations</h3><p>Help connect research with local context, trust, and community-informed solutions.</p></article>
+  </div>
+  <div class="principle">“The value of a research question is strengthened when the people affected help define what matters.”</div>
+ </div>
+</section>
+
+<section class="next" id="next">
+ <div class="container next-grid">
+  <div><div class="kicker">Continue exploring</div><h2>A research concept built around partnership.</h2><p>This homepage is the first step. The next sections will present the research rationale, proposed methods, patient-engagement plan, and a clearly labelled illustrative demonstration.</p></div>
+  <a class="btn btn-primary" href="#home">Back to top&nbsp; ↑</a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-row">
+  <div><strong>PATIENT VOICE</strong><div>Independent research concept · 2026</div></div>
+  <div class="disclaimer">This is an independently developed concept and is not an official University of Maryland or PATIENTS Program website, project, or endorsement.</div>
+ </div>
+</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{
+ const isOpen=navLinks.classList.toggle('open');
+ menuBtn.setAttribute('aria-expanded',String(isOpen));
+});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+ navLinks.classList.remove('open');
+ menuBtn.setAttribute('aria-expanded','false');
+}));
+</script>
+</body>
+</html>
