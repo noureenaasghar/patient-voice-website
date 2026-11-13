@@ -91,6 +91,22 @@ footer strong{color:white;letter-spacing:.1em}
  .nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}
 }
 @media(max-width:480px){.container{width:min(100% - 30px,1160px)}.hero{padding:55px 0}.visual{min-height:320px}.visual-card{padding:19px}.quote{font-size:21px}.chip-one{right:-3px}.chip-two{left:-3px}.section{padding:62px 0}}
+
+.detail-section{padding:78px 0}.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.detail-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:23px}
+.detail-card h3{font-family:Georgia,serif;color:var(--navy);font-size:21px;font-weight:500;margin:8px 0}
+.detail-card p{font-size:13px;color:var(--muted)}.phase{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);font-weight:800}
+.note-panel{background:#edf3f0;border:1px solid var(--line);padding:20px 22px;border-radius:10px;margin-top:22px;color:#526574;font-size:13px}
+.demo-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.demo-panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.demo-tag{display:inline-block;background:#fff0d9;color:#815d2b;border-radius:4px;padding:5px 8px;font-size:10px;font-weight:800;letter-spacing:.08em}
+.bar-row{display:grid;grid-template-columns:120px 1fr 38px;gap:10px;align-items:center;margin:15px 0;font-size:12px;color:#526574}
+.bar-track{height:9px;background:#e9efec;border-radius:10px;overflow:hidden}.bar-fill{height:100%;background:var(--sage);border-radius:10px}
+.choice{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px;color:#526574}
+.choice input{accent-color:var(--teal);margin-top:4px}.demo-output{margin-top:16px;padding:14px;background:#edf3f0;border-radius:8px;font-size:13px;color:#405563;min-height:52px}
+.profile-panel{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:start;background:white;border:1px solid var(--line);border-radius:14px;padding:28px}
+.profile-mark{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#dcebe5,#f2e6d3);display:grid;place-items:center;color:var(--teal);font-family:Georgia,serif;font-size:42px}
+.profile-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.profile-list div{background:#f3f6f4;padding:12px;border-radius:8px;font-size:12px;color:#526574}
+@media(max-width:800px){.detail-grid,.demo-wrap{grid-template-columns:1fr}.profile-panel{grid-template-columns:1fr}.profile-mark{width:96px;height:96px;font-size:32px}.profile-list{grid-template-columns:1fr}.bar-row{grid-template-columns:95px 1fr 34px}}
 </style>
 </head>
 <body>
@@ -98,9 +114,9 @@ footer strong{color:white;letter-spacing:.1em}
  <div class="container nav">
   <a class="brand" href="#home"><span class="brand-mark">✳</span><span>PATIENT VOICE</span></a>
   <nav class="nav-links" id="navLinks">
-   <a href="#about">The Initiative</a><a href="#overview">Research Overview</a><a href="#aims">Research Aims</a><a href="#partnership">Patient Partnership</a><a href="#next">Explore</a>
+   <a href="#about">The Initiative</a><a href="#overview">Research Overview</a><a href="#aims">Research Aims</a><a href="#partnership">Partnership</a><a href="#methodology">Methods</a><a href="#demonstration">Demo</a><a href="#researcher">Researcher</a>
   </nav>
-  <a class="nav-cta" href="#aims">Explore the concept&nbsp; ↗</a>
+  <a class="nav-cta" href="#methodology">Explore the concept&nbsp; ↗</a>
   <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
  </div>
 </header>
@@ -219,9 +235,51 @@ footer strong{color:white;letter-spacing:.1em}
  </div>
 </section>
 
+
+<section class="detail-section" id="methodology" style="background:#fff"><div class="container">
+<div class="section-head"><div class="kicker">Proposed methodology</div><h2>Listen first. Prioritize together. Test what is practical.</h2><p class="section-intro">An exploratory sequential mixed-methods design is proposed: qualitative exploration will inform collaborative priority-setting and development of a practical strategy. This is a starting framework, not a finalized protocol.</p></div>
+<div class="detail-grid">
+<article class="detail-card"><div class="phase">Phase 01 · Explore</div><h3>Understand experiences</h3><p>Semi-structured interviews with adults living with chronic conditions, caregivers, and community pharmacists. Explore affordability, medicine availability, travel, refill interruptions, communication, treatment burden, and continuity of care.</p></article>
+<article class="detail-card"><div class="phase">Phase 02 · Prioritize</div><h3>Make sense together</h3><p>Thematic analysis will organize interview findings. Accessible summaries can be shared with patient partners to discuss and rank priority barriers, explain what matters, and co-design a practical response with community stakeholders.</p></article>
+<article class="detail-card"><div class="phase">Phase 03 · Assess</div><h3>Examine feasibility</h3><p>A small feasibility assessment of a selected co-designed strategy will focus on acceptability, practicality, usability, participant experience, and perceived value — not clinical effectiveness.</p></article>
+</div><div class="note-panel"><strong>Potential outputs:</strong> patient-informed medication-access priorities, a collaboratively developed intervention concept, and preliminary feasibility findings. Population, condition focus, setting, recruitment, sample size, instruments, and analysis plan must be refined with academic supervision, community partners, and ethics review.</div>
+</div></section>
+
+<section class="detail-section" id="demonstration"><div class="container">
+<div class="section-head"><div class="kicker">Research demonstration</div><h2>What might patient-led prioritization look like?</h2><p class="section-intro">This interactive example illustrates how people could identify barriers that matter to them. It is a demonstration of a proposed activity only.</p><span class="demo-tag">SIMULATED EXAMPLE — NOT REAL RESEARCH DATA</span></div>
+<div class="demo-wrap"><div class="demo-panel"><h3 style="font-family:Georgia,serif;color:#142C45;font-weight:500;margin-top:0">Illustrative barrier profile</h3><p style="font-size:12px;color:#657783">Hypothetical values used only to demonstrate a possible display. They are not findings, estimates, or evidence about any population.</p>
+<div class="bar-row"><span>Affordability</span><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div><strong>85%</strong></div>
+<div class="bar-row"><span>Availability</span><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div><strong>75%</strong></div>
+<div class="bar-row"><span>Transport</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><strong>58%</strong></div>
+<div class="bar-row"><span>Communication</span><div class="bar-track"><div class="bar-fill" style="width:48%"></div></div><strong>48%</strong></div>
+<div class="bar-row"><span>Complex routines</span><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div><strong>35%</strong></div></div>
+<div class="demo-panel"><h3 style="font-family:Georgia,serif;color:#142C45;font-weight:500;margin-top:0">Choose the issues you would want research to explore</h3><p style="font-size:12px;color:#657783">Select any that apply. No answers are collected or sent anywhere.</p>
+<label class="choice"><input type="checkbox" name="barrier" value="Medicine cost and affordability">Medicine cost and affordability</label>
+<label class="choice"><input type="checkbox" name="barrier" value="Medicine stock and availability">Medicine stock and availability</label>
+<label class="choice"><input type="checkbox" name="barrier" value="Travel and transportation">Travel and transportation</label>
+<label class="choice"><input type="checkbox" name="barrier" value="Communication with healthcare providers">Communication with healthcare providers</label>
+<label class="choice"><input type="checkbox" name="barrier" value="Complex treatment routines">Complex treatment routines</label>
+<button class="btn btn-primary" id="priorityBtn" type="button" style="border:0;cursor:pointer;margin-top:16px">Show my selected priorities</button>
+<div class="demo-output" id="priorityOutput" aria-live="polite">Your selected topics will appear here. This activity stays in your browser and is not a live survey.</div></div></div>
+<div class="note-panel"><strong>How this could inform the study:</strong> interview accounts would first be analyzed to identify themes. Patient partners could then discuss and rank those themes, explain why they matter, and help decide which practical response should be explored. A real study would use an ethically approved process and would not rely on this illustrative chart.</div>
+</div></section>
+
+<section class="detail-section" id="impact" style="background:#fff"><div class="container">
+<div class="section-head"><div class="kicker">Potential contribution</div><h2>From patient priorities to more responsive research.</h2><p class="section-intro">The intended contribution is to strengthen how medication-access challenges are understood and addressed with the people who experience them.</p></div>
+<div class="detail-grid"><article class="detail-card"><div class="number">01</div><h3>Patient-informed priorities</h3><p>Clarify which access barriers and outcomes patients and caregivers consider most important in daily life.</p></article><article class="detail-card"><div class="number">02</div><h3>Stronger partnerships</h3><p>Create meaningful opportunities for patients, caregivers, pharmacists, and community organizations to shape research decisions.</p></article><article class="detail-card"><div class="number">03</div><h3>Practical next steps</h3><p>Generate a co-designed strategy and preliminary feasibility insights to guide future research, service development, or policy discussion.</p></article></div>
+<div class="note-panel">These are anticipated contributions, not guaranteed outcomes. Whether a strategy improves access or health outcomes would require subsequent evaluation in appropriately designed studies.</div>
+</div></section>
+
+<section class="detail-section" id="researcher"><div class="container">
+<div class="section-head"><div class="kicker">About the researcher</div><h2>Pharmacy practice experience, with a patient-centered research lens.</h2></div>
+<div class="profile-panel"><div class="profile-mark" aria-hidden="true">NA</div><div>
+<h3 style="font-family:Georgia,serif;color:#142C45;font-size:27px;font-weight:500;margin:0 0 4px">Noureena Asghar, Pharm.D</h3><p style="color:#176B70;font-size:12px;font-weight:700;margin:0 0 14px">Pharmacist · Public health and pharmacy services research interests</p>
+<p style="font-size:13px;color:#526574">A pharmacist trained in Pakistan, with approximately ten years of experience across pharmaceutical distribution, community pharmacy, medication counselling, and related healthcare roles. Her interests include understanding how people experience medication access and how pharmacy and community partnerships can contribute to more responsive services.</p>
+<div class="profile-list"><div><strong>Education</strong><br>Doctor of Pharmacy (Pharm.D), 2016</div><div><strong>Published research</strong><br>Qualitative study on pharmacists’ roles in healthy weight management in Pakistan (BMC Health Services Research, 2020)</div><div><strong>Research experience</strong><br>Survey research involving 360 women across five districts of Punjab; basic SPSS and qualitative research experience</div><div><strong>Research interests</strong><br>Patient-centered outcomes, medication access and adherence, pharmacy health services, community engagement, and health equity</div></div>
+</div></div></div></section>
 <section class="next" id="next">
  <div class="container next-grid">
-  <div><div class="kicker">Continue exploring</div><h2>A research concept built around partnership.</h2><p>This homepage is the first step. The next sections will present the research rationale, proposed methods, patient-engagement plan, and a clearly labelled illustrative demonstration.</p></div>
+  <div><div class="kicker">Continue exploring</div><h2>A research concept built around partnership.</h2><p>This independent concept brings together a research rationale, proposed methods, patient partnership, an illustrative prioritization activity, and the researcher’s relevant experience.</p></div>
   <a class="btn btn-primary" href="#home">Back to top&nbsp; ↑</a>
  </div>
 </section>
@@ -229,7 +287,7 @@ footer strong{color:white;letter-spacing:.1em}
 
 <footer>
  <div class="container footer-row">
-  <div><strong>PATIENT VOICE</strong><div>Independent research concept · 2026</div></div>
+  <div><strong>PATIENT VOICE</strong><div>Better access. Stronger voices.</div><div>Independent research concept by Noureena Asghar, Pharm.D · 2026</div></div>
   <div class="disclaimer">This is an independently developed concept and is not an official University of Maryland or PATIENTS Program website, project, or endorsement.</div>
  </div>
 </footer>
@@ -244,6 +302,15 @@ navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
  navLinks.classList.remove('open');
  menuBtn.setAttribute('aria-expanded','false');
 }));
+
+const priorityBtn=document.getElementById('priorityBtn');
+const priorityOutput=document.getElementById('priorityOutput');
+if(priorityBtn && priorityOutput){
+ priorityBtn.addEventListener('click',()=>{
+  const selected=[...document.querySelectorAll('input[name="barrier"]:checked')].map(item=>item.value);
+  priorityOutput.textContent=selected.length ? 'Your selected topics: '+selected.join('; ')+'. In a real study, participants would discuss why these issues matter and help rank them.' : 'Please select at least one topic to display your priorities.';
+ });
+}
 </script>
 </body>
 </html>
